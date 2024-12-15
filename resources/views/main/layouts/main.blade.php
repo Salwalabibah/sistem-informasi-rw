@@ -9,8 +9,7 @@
         <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/footers/">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link href="{{ asset("assets/css/bootstrap.min.css") }}" rel="stylesheet">
 
         <link rel="stylesheet" href="/assets/css/main.css">
         <link rel="stylesheet" href="/assets/css/main/owl.theme.default.min.css">
@@ -187,11 +186,11 @@
 
         <script src="assets/js/main/jquery-3.3.1.min.js"></script>
         <script src="assets/js/main/bootstrap.min.js"></script>
-        <script src="assets/js/main/player.js"></script>
+        {{-- <script src="assets/js/main/player.js"></script> --}}
         <script src="assets/js/main/jquery.nice-select.min.js"></script>
         <script src="assets/js/main/mixitup.min.js"></script>
         <script src="assets/js/main/jquery.slicknav.js"></script>
         <script src="assets/js/main/owl.carousel.min.js"></script>
-        <script src="assets/js/main/main.js"></script>
+        {{-- <script src="assets/js/main/main.js"></script> --}}
     </body>
 </html>

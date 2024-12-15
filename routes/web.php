@@ -18,6 +18,7 @@ use App\Http\Controllers\OrganisasiController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\Menu\MenuItemController;
 use App\Http\Controllers\Menu\MenuGroupController;
+use App\Http\Controllers\PublicServiceController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\RoleAndPermission\RoleController;
 use App\Http\Controllers\RoleAndPermission\ExportRoleController;
@@ -43,6 +44,12 @@ Route::get('/', [LandingPageController::class, 'index']);
 Route::get('/agenda', [LandingPageController::class, 'agenda']);
 Route::get('/potensi', [LandingPageController::class, 'potensi']);
 Route::get('/galeri', [LandingPageController::class, 'galeri']);
+
+Route::prefix('pelayanan')->as('persuratan.')->group(function () {
+    Route::get('/', [PublicServiceController::class, 'index'])->name('index');
+    Route::post('/findNik', [PublicServiceController::class, 'findNik'])->name("findNik");
+    Route::post('/generate-pdf', [PublicServiceController::class, 'generatePDF'])->name('generatePDF');
+});
 
 Route::get('/admin', function () {
     return view('admin.auth/login');

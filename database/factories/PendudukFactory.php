@@ -17,8 +17,8 @@ class PendudukFactory extends Factory
     public function definition()
     {
         return [
-            'no_kk' => $this->faker->nik(),
-            'nik' => $this->faker->nik(),
+            'no_kk' => $this->faker->randomNumber(9, true) . str_pad($this->faker->randomNumber(7, true), 7, '0', STR_PAD_LEFT),
+            'nik' => $this->faker->randomNumber(9, true) . str_pad($this->faker->randomNumber(7, true), 7, '0', STR_PAD_LEFT),
             'nama' => $this->faker->name(),
             'tempat_lahir' => $this->faker->state(),
             'tanggal_lahir' => $this->faker->date(),

@@ -71,19 +71,6 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Jenis Kelamin</label>
-                            <select class="form-control select2 @error('jenis_kelamin') is-invalid @enderror" name="jenis_kelamin">
-                                <option value=""></option>
-                                <option value="L">Laki-laki</option>
-                                <option value="P">Perempuan</option>
-                            </select>
-                            @error('jenis_kelamin')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
                             <label>Golongan Darah</label>
                             <select class="form-control select2 @error('golongan_darah') is-invalid @enderror" name="golongan_darah">
                                 <option value=""></option>
